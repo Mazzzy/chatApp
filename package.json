@@ -1,0 +1,14 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Node, Sockets based Chat App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mazahar Shaikh | @mazahar_shaikh",
+  "license": "MIT",
+  "dependencies": {
+    "websocket": "^1.0.26"
+  }
+}

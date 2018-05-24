@@ -1,0 +1,207 @@
+/**
+  * Presentation layer for chat app
+  * Developed: Mazahart Shaikh | @mazahar_shaikh
+  * Date: 24 May 2018
+  * Purpose: Contains styling for chat window, input and list of users
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+  background: -webkit-linear-gradient(330deg, #000, #f0a6ca);
+  background: linear-gradient(120deg, #000, #f0a6ca);
+  overflow: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 106vh;
+  width: 100vw;
+}
+
+.container h1 {
+  margin: 0.5em auto;
+  color: #FFF;
+  text-align: center;
+}
+
+.chatbox {
+  background: rgba(255, 255, 255, 0.05);
+  width: 620px;
+  height: 82vh;
+  border-radius: 0.2em;
+  position: relative;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+}
+
+.chatbox-messages {
+  height: 72vh;
+  overflow: auto;
+  position: relative;
+}
+
+.chatbox-messages .user-message.current-user {
+  float: right;
+}
+
+.chatbox-messages .user-message.current-user:after {
+  content: '';
+  position: absolute;
+  margin: -1.5em 1.87em;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid rgba(227,227,227,1);
+  border-right: none;
+
+}
+
+.chatbox-messages .user-message {
+  float: left;
+}
+
+.chatbox-messages .user-message:after {
+  content: '';
+  position: absolute;
+  margin: -1.5em -17.04em;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgba(227,227,227,1);
+
+}
+
+.user-message {
+  /* background: rgba(255, 255, 255, 0.2); */
+  background: rgba(5,4,5,1);
+  background: -moz-linear-gradient(left, rgba(5,4,5,1) 0%, rgba(227,227,227,1) 0%, rgba(225,225,225,1) 11%, rgba(219,219,219,1) 47%, rgba(219,219,219,1) 99%, rgba(237,237,237,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(5,4,5,1) 0%, rgba(227,227,227,1) 0%, rgba(225,225,225,1) 11%, rgba(219,219,219,1) 47%, rgba(219,219,219,1) 99%, rgba(237,237,237,1) 100%);
+  background: -o-linear-gradient(left, rgba(5,4,5,1) 0%, rgba(227,227,227,1) 0%, rgba(225,225,225,1) 11%, rgba(219,219,219,1) 47%, rgba(219,219,219,1) 99%, rgba(237,237,237,1) 100%);
+  background: -ms-linear-gradient(left, rgba(5,4,5,1) 0%, rgba(227,227,227,1) 0%, rgba(225,225,225,1) 11%, rgba(219,219,219,1) 47%, rgba(219,219,219,1) 99%, rgba(237,237,237,1) 100%);
+  background: linear-gradient(to right, rgba(5,4,5,1) 0%, rgba(227,227,227,1) 0%, rgba(225,225,225,1) 11%, rgba(219,219,219,1) 47%, rgba(219,219,219,1) 99%, rgba(237,237,237,1) 100%);
+  padding: 1em 0;
+  height: auto;
+  width: 65%;
+  border-radius: 5px;
+  margin: 2em 1em;
+  overflow: auto;
+}
+
+.user-message > p.name {
+  color: #000;
+  font-size: 1em;
+}
+
+.user-message > p.message {
+  color: #000;
+  font-size: 0.7em;
+  margin: 0 2.8em;
+}
+
+.user-message > p.duration {
+  color: #000;
+  text-align: right;
+  float: right;
+}
+
+.user-list {
+  background: rgba(255, 255, 255, 0.1);
+  width: 25%;
+  height: 72vh;
+  float: right;
+  border-top-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.user-list h1 {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+  padding: 1em;
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+}
+
+.user, .user-active, .user-busy, .user-away {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 100%;
+  margin: 1em 0.7em;
+}
+
+.user-active {
+  background: rgba(23, 190, 187, 0.8);
+}
+
+.user-busy {
+  background: rgba(252, 100, 113, 0.8);
+}
+
+.user-away {
+  background: rgba(255, 253, 130, 0.8);
+}
+
+.chatbox p {
+  float: left;
+  text-align: left;
+  margin: -0.25em 2em;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: #FFF;
+  width: 200px;
+}
+
+.enter-msg {
+  margin-top: 1.5em;
+}
+
+.enter-msg p {
+  margin-left: 0.5em;
+  margin-bottom: 0.8em;
+}
+
+.chatbox .enter-msg input {
+  background: rgba(255, 255, 255, 0.03);
+  border: none;
+  width: 75%;
+  padding: 1.2em;
+  outline: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}

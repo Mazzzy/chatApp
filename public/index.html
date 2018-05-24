@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Chat App</h1>
+      <div class='chatbox'>
+        <!-- display users online -->
+        <div class='user-list' id="userList">
+          <h1>Users Online</h1>
+        </div>
+        <!-- display chat messages -->
+        <div class="chatbox-messages" id="messagesBox">
+        </div>
+        <!-- add message -->
+        <div class="enter-msg">
+          <p id="status">Connecting...</p>
+          <input type="text" placeholder="Enter input" id="input" >
+        </div>
+      </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
