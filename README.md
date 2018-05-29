@@ -21,3 +21,7 @@ Use of express for serving client html
 - View the messages to and fro during chat
 
 Feel the app running!
+
+## Online Demo
+
+* [show chat app](https://chat-app-8080.herokuapp.com/)
