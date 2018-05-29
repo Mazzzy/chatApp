@@ -85,7 +85,7 @@ $(function () {
             addMessage(json.data.author, json.data.text,
                        json.data.color, new Date(json.data.time));
             // add singleUser
-            addUser(json.data[i].author);
+            addUser(json.data.author);
         } else {
             console.log('Hmm..., I\'ve never seen JSON like this: ', json);
         }
@@ -132,7 +132,7 @@ $(function () {
      */
     function addMessage(author, message, color, dt) {
       var currentUser = (author === myName) ? 'current-user' :'';
-       messagesBox.prepend('<div class="user-message '+currentUser+'">'
+       messagesBox.append('<div class="user-message '+currentUser+'">'
                               +'<p class="name">'
                               +  '<span style="color:' + color + '">' + author + '</span>'
                               +'</p><br/>'
