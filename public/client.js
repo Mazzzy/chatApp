@@ -35,8 +35,8 @@ $(function () {
     }
 
     // open connection
-    var HOST = location.origin.replace(/^http/, 'ws');
-    var connection = new WebSocket(HOST+':9000');
+    var HOST = location.origin.replace(/^http/, 'ws').replace(/:9000/,'');
+    var connection = new WebSocket(HOST + ':1337');
 
     connection.onopen = function () {
         // first we want users to enter their names

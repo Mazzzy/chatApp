@@ -17,9 +17,9 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
-// app.listen(port, function() {
-//     console.log('Client is served on http://localhost:' + port);
-// });
+app.listen(port, function() {
+    console.log('Client is served on http://localhost:' + port);
+});
 
 // WebSocket realted stuffs
 
@@ -57,9 +57,11 @@ colors.sort(function(a,b) { return Math.random() > 0.5; } );
 /**
  * HTTP server
  */
-var server = http.createServer(app);
-server.listen(port, function() {
-    console.log((new Date()) + " Sockets:Server is listening on port " + port);
+var server = http.createServer(function(request, response) {
+    // Not important for us. We're writing WebSocket server, not HTTP server
+});
+server.listen(webSocketsServerPort, function() {
+    console.log((new Date()) + " Sockets:Server is listening on port " + webSocketsServerPort);
 });
 
 /**
