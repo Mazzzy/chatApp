@@ -7,15 +7,13 @@ Use of express for serving client html
 
 # Installation
 - First install node on your machine
-- Go to dirctory 'chatApp'
+- Go to directory 'chatApp'
   - Install packages using 'npm install'
   - Then start node server as 'node server.js'.
-  - It starts server for two stuffs
-    - On port 9000 'client'
-    - On port 1337 'websockets server'
+  - It starts server on port 9000 
 
 # Usage
-- Go to browser and opne the url 'http://localhost:9000/'
+- Go to browser and open the url 'http://localhost:9000/'
 - Type the name and press enter.
 - Type the message and press enter
 - View the messages to and fro during chat
